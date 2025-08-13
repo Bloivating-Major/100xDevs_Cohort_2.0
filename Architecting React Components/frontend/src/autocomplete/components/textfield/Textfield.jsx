@@ -1,11 +1,7 @@
 import './textfield.css';
 
-function Textfield() {
-  return (
-    <div className="textfield">
-      <input type="text" />
-    </div>
-  );
+function Textfield({ text='', onInput=()=> {} }) {
+  return <input className='textfield' placeholder='Type something...' type="text" value={text} onInput={onInput} />;
 }
 
 export default Textfield;
