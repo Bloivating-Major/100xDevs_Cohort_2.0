@@ -49,7 +49,7 @@ const Autocomplete = () => {
     <div className='autocomplete'>
       <h2>Autocomplete</h2>
       <Header onLanguageChange={handleLanguageChange} language={language} />
-      <Suggestions suggestions={filteredSuggestions} />
+      {!!filteredSuggestions.length && <Suggestions suggestions={filteredSuggestions} />}
     </div>
   )
 }
